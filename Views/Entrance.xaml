@@ -1,0 +1,25 @@
+﻿<Window x:Class="MineSweeperWPF.Views.Entrance"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MineSweeperWPF.Views"
+        mc:Ignorable="d"
+        Title="Entrance" Height="250" Width="340" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" ResizeMode="NoResize">
+    <Window.Background>
+        <SolidColorBrush Opacity="0.7" Color="#4A752C"></SolidColorBrush>
+    </Window.Background>
+    <Grid>
+        <StackPanel>
+            <Button Style="{StaticResource EntranceButton}" BorderThickness="0" Margin="0,20,0,0" Height="90" Width="80">
+                <Button.Background>
+                    <ImageBrush ImageSource="\Images\left-click.png"/>
+                </Button.Background>
+            </Button>
+            
+            <Label Margin="0,15,0,0" FontSize="16" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{Binding Info}"></Label>
+
+            <Button Margin="0,15,0,0" Height="40" Width="90" FontSize="20" Style="{StaticResource MaterialDesignRaisedDarkButton}" BorderThickness="0" Background="#307470" Click="StartButtonClick" Content="Start"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
